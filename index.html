@@ -108,9 +108,20 @@
         
         <div class="links">
             <a href="https://www.linkedin.com/in/petrholub" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/petrholub" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:petr@holub.dev">Email</a>
+            <a href="https://github.com/TiguCZ" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#" id="email-link">Email</a>
         </div>
     </div>
+
+    <script>
+        // Email obfuscation to prevent spam bots
+        (function() {
+            const user = 'petr';
+            const domain = 'holub' + '.' + 'dev';
+            const email = user + '@' + domain;
+            const link = document.getElementById('email-link');
+            link.href = 'mailto:' + email;
+        })();
+    </script>
 </body>
 </html>
