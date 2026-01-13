@@ -1,3 +1,5 @@
-## Welcome to holub.dev
+# holub.dev
 
-You will find something interesting here ...
+Personal website for Petr Holub.
+
+This repository hosts the GitHub Pages site available at [holub.dev](https://holub.dev).
