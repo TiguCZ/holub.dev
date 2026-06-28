@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yolk Timer is an upcoming iOS app for cooking eggs with simple, reliable timing." />
+  <title>Yolk Timer</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffaf3;
+      --panel: #ffffff;
+      --text: #2f241d;
+      --muted: #65594d;
+      --accent: #d98b2b;
+      --accent-dark: #9f6016;
+      --border: #f2dfc3;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, var(--bg) 0%, #fffdf8 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.2rem;
+      box-shadow: 0 16px 40px rgba(93, 58, 21, 0.08);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: #ffe8c7;
+      color: var(--accent-dark);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 0 1.25rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 10px 24px rgba(217, 139, 43, 0.24);
+    }
+
+    .button.secondary {
+      background: #fff4e6;
+      color: var(--accent-dark);
+      box-shadow: none;
+      border: 1px solid var(--border);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card-item {
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      background: #fffdf8;
+      border: 1px solid var(--border);
+    }
+
+    .card-item h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+    }
+
+    .card-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card">
+      <div class="eyebrow">Coming soon</div>
+      <h1>Yolk Timer</h1>
+      <p class="lead">
+        Yolk Timer is an upcoming iOS app designed to make egg cooking simple, calm, and reliable.
+        This page is a placeholder while the project is being prepared for launch.
+      </p>
+
+      <div class="actions">
+        <a class="button" href="/yolktimer/privacy/">View privacy policy</a>
+        <a class="button secondary" href="/">Back to homepage</a>
+      </div>
+
+      <div class="grid">
+        <article class="card-item">
+          <h2>Simple prep</h2>
+          <p>Choose a preferred doneness and keep the experience focused on the moment.</p>
+        </article>
+        <article class="card-item">
+          <h2>Reliable timing</h2>
+          <p>Get a clear countdown so your eggs are ready exactly when you want them.</p>
+        </article>
+        <article class="card-item">
+          <h2>Private by design</h2>
+          <p>No account is required, and the app is built to respect your privacy.</p>
+        </article>
+        <article class="card-item">
+          <h2>App Store ready</h2>
+          <p>This page also provides a privacy URL for app store submission needs.</p>
+        </article>
+      </div>
+
+      <footer>
+        More details will be added here as the app development progresses.
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
