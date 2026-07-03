@@ -4,9 +4,9 @@
     --panel: #ffffff;
     --text: #333333;
     --muted: #666666;
-    --accent: #0066cc;
-    --accent-strong: #004a99;
-    --accent-bg: rgba(0, 102, 204, 0.12);
+    --accent: #ff8f3c;
+    --accent-strong: #e68610;
+    --accent-bg: rgba(255, 143, 60, 0.12);
     --border: rgba(0, 0, 0, 0.08);
     --shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
     --radius: 24px;
@@ -20,9 +20,9 @@
         --panel: #181818;
         --text: #e5e5e5;
         --muted: #a0a0a0;
-        --accent: #4a9eff;
-        --accent-strong: #66b0ff;
-        --accent-bg: rgba(74, 158, 255, 0.16);
+        --accent: #ffb26a;
+        --accent-strong: #ffcc86;
+        --accent-bg: rgba(255, 178, 106, 0.16);
         --border: rgba(255, 255, 255, 0.1);
         --shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
     }
@@ -137,7 +137,7 @@ li {
 .links a {
     background: var(--accent-bg);
     color: var(--accent);
-    border-radius: var(--radius-sm);
+    border-radius: 8px;
 }
 
 .button.secondary {
@@ -153,7 +153,7 @@ li {
 }
 
 .links a:hover {
-    background: rgba(0, 102, 204, 0.18);
+    background: rgba(255, 143, 60, 0.18);
 }
 
 a {
