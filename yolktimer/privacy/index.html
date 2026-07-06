@@ -65,7 +65,7 @@
 
         <h2>Contact</h2>
         <p>
-          If you have any questions about this Privacy Policy, you can contact us at <a href="mailto:petr@holub.dev">petr@holub.dev</a>.
+          If you have any questions about this Privacy Policy, you can <a class="contact-link email-link" data-email-code="112,101,116,114,64,104,111,108,117,98,46,100,101,118" aria-label="Email Petr Holub">contact us via email</a>.
         </p>
 
         <p><a href="../">← Back to Yolk Timer</a></p>
@@ -80,6 +80,15 @@
           details.removeAttribute('open');
         }
       });
+    });
+
+    document.querySelectorAll('.email-link').forEach(function (link) {
+      var code = link.dataset.emailCode || '';
+      if (!code) return;
+      var email = code.split(',').map(function (char) {
+        return String.fromCharCode(parseInt(char, 10));
+      }).join('');
+      link.href = 'mailto:' + email;
     });
   </script>
 </body>
