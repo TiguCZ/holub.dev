@@ -347,6 +347,35 @@ main {
   font-size: 0.95rem;
 }
 
+.page-card {
+  padding: 24px 24px 32px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+
+.page-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.page-card-hero-art {
+  justify-content: flex-start;
+}
+
+.page-card-hero-art img {
+  width: 60px;
+  height: 60px;
+  margin-left: 0;
+  border-radius: 12px;
+}
+
+.privacy-page-icon {
+  border-radius: 12px;
+}
+
 @media (max-width: 760px) {
   .site-shell {
     padding: 16px;
