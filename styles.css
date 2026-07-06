@@ -104,11 +104,9 @@ main {
   color: var(--muted);
 }
 
-.site-nav a:hover,
-.site-nav a:focus-visible,
-.mobile-nav-links a:hover,
-.mobile-nav-links a:focus-visible,
-.inline-link:hover,
+  .site-nav a {
+    color: var(--text);
+  }
 .inline-link:focus-visible,
 .page-nav a:hover,
 .page-nav a:focus-visible,
@@ -396,10 +394,10 @@ main {
     min-width: min(220px, calc(100vw - 32px));
     width: auto;
     padding: 16px 18px;
-    background: var(--bg);
-    border: 1px solid var(--border);
+    background: var(--header-bg) !important;
+    border: 1px solid var(--header-border) !important;
     border-radius: 12px;
-    box-shadow: var(--avatar-shadow);
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.18);
   }
 
   .hero {
