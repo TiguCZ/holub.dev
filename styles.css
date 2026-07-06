@@ -229,22 +229,8 @@ main {
   color: var(--accent);
 }
 
-.hero-product .eyebrow {
-  font-size: 1.7rem;
-  letter-spacing: 0.04em;
-  margin-bottom: 8px;
-}
-
-.hero-copy {
-  padding-left: 4px;
-}
-
-.contact-links,
-.page-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 24px;
+.project-block .eyebrow {
+  color: var(--accent);
 }
 
 .contact-link {
@@ -365,15 +351,22 @@ main {
   justify-content: flex-start;
 }
 
-.page-card-hero-art img {
+.page-card-hero-art img,
+.small-page-icon {
   width: 60px;
   height: 60px;
   margin-left: 0;
   border-radius: 12px;
 }
 
-.privacy-page-icon {
-  border-radius: 12px;
+.project-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.project-block .small-page-icon {
+  flex-shrink: 0;
 }
 
 @media (max-width: 760px) {
