@@ -3,48 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yolk Timer is an upcoming iOS app for cooking eggs with simple, reliable timing." />
+  <meta name="description" content="Yolk Timer is a focused iOS app for cooking eggs with calm, reliable timing." />
   <title>Yolk Timer</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <main>
-    <section class="card">
-      <div class="eyebrow">Coming soon</div>
-      <h1>Yolk Timer</h1>
-      <p class="lead">
-        Yolk Timer is an upcoming iOS app designed to make egg cooking simple, calm, and reliable.
-        This page is a placeholder while the project is being prepared for launch.
-      </p>
-
-      <div class="actions">
-        <a class="button" href="privacy/">View privacy policy</a>
-        <a class="button secondary" href="../">Back to homepage</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="../">Petr Holub</a>
+      <div class="nav-shell">
+        <nav class="site-nav" aria-label="Project navigation">
+          <a href="#screens">Screenshots</a>
+          <a href="#features">Features</a>
+          <a href="#download">Download</a>
+        </nav>
+        <details class="mobile-nav">
+          <summary aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </summary>
+          <nav class="mobile-nav-links" aria-label="Mobile navigation">
+            <a href="#screens">Screenshots</a>
+            <a href="#features">Features</a>
+            <a href="#download">Download</a>
+          </nav>
+        </details>
       </div>
+    </header>
 
-      <div class="grid">
-        <article class="card-item">
-          <h2>Simple prep</h2>
-          <p>Choose a preferred doneness and keep the experience focused on the moment.</p>
-        </article>
-        <article class="card-item">
-          <h2>Reliable timing</h2>
-          <p>Get a clear countdown so your eggs are ready exactly when you want them.</p>
-        </article>
-        <article class="card-item">
-          <h2>Private by design</h2>
-          <p>No account is required, and the app is built to respect your privacy.</p>
-        </article>
-        <article class="card-item">
-          <h2>App Store ready</h2>
-          <p>This page also provides a privacy URL for app store submission needs.</p>
-        </article>
-      </div>
+    <main>
+      <section class="hero page-hero" aria-labelledby="yolk-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Yolk Timer</p>
+          <h1 id="yolk-title">A calm way to cook eggs well.</h1>
+          <p class="intro">
+            Yolk Timer is a simple iOS app for keeping egg cooking clear and dependable, whether you want a soft set or something firmer.
+          </p>
+          <div class="page-nav" aria-label="Project links">
+            <a href="#screens">Screenshots</a>
+            <a href="#features">Features</a>
+            <a href="#download">Download</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img src="assets/ready-screen.svg" alt="" />
+        </div>
+      </section>
 
-      <footer>
-        More details will be added here as the app development progresses.
+      <section id="screens" class="page-section" aria-labelledby="screens-title">
+        <h2 id="screens-title">Screenshots</h2>
+        <div class="gallery">
+          <figure>
+            <img src="assets/ready-screen.svg" alt="Yolk Timer ready screen showing a countdown and a simple timer interface." />
+            <figcaption>Focused countdown view.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/doneness-screen.svg" alt="Yolk Timer doneness selection screen with clear cooking options." />
+            <figcaption>Choose the result you want.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/summary-screen.svg" alt="Yolk Timer summary view showing timing details after cooking." />
+            <figcaption>A clear finish state.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="features" class="page-section" aria-labelledby="features-title">
+        <h2 id="features-title">Features</h2>
+        <div class="feature-list">
+          <article>
+            <h3>Quiet interface</h3>
+            <p>Nothing unnecessary. Just the timer, the result and the next step.</p>
+          </article>
+          <article>
+            <h3>Reliable timing</h3>
+            <p>Use a simple countdown and keep your cooking process clear from beginning to end.</p>
+          </article>
+          <article>
+            <h3>Consistent options</h3>
+            <p>Pick the doneness that suits you and trust the app to support the experience.</p>
+          </article>
+          <article>
+            <h3>Private by design</h3>
+            <p>No account is required and no personal data is collected.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="download" class="page-section" aria-labelledby="download-title">
+        <h2 id="download-title">Download</h2>
+        <p>
+          Yolk Timer is available as a simple, private app for iPhone. More details and release information will be shared here when available.
+        </p>
+        <a class="inline-link" href="../">Back to homepage →</a>
+      </section>
+
+      <footer class="page-footer">
+        <a href="privacy/">Privacy Policy</a>
       </footer>
-    </section>
-  </main>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll('.mobile-nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var details = this.closest('.mobile-nav');
+        if (details) {
+          details.removeAttribute('open');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

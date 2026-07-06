@@ -1,33 +1,109 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petr Holub - Software Developer</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Petr Holub is a software engineer building thoughtful products for mobile, backend and AI-powered experiences." />
+  <title>Petr Holub</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="home-page">
-    <div class="container">
-        <img src="avatar.png" alt="Petr Holub" class="avatar">
-        <h1>Petr Holub</h1>
-        <p>Building software with users in mind</p>
-        
-        <div class="links">
-            <a href="https://www.linkedin.com/in/holubpetr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/TiguCZ" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="#" id="email-link">Email</a>
-        </div>
-    </div>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#top">Petr Holub</a>
+      <div class="nav-shell">
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#work">Current Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <details class="mobile-nav">
+          <summary aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </summary>
+          <nav class="mobile-nav-links" aria-label="Mobile navigation">
+            <a href="#about">About</a>
+            <a href="#work">Current Work</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </details>
+      </div>
+    </header>
 
-    <script>
-        // Email obfuscation to prevent spam bots
-        (function() {
-            const user = 'petr';
-            const domain = 'holub' + '.' + 'dev';
-            const email = user + '@' + domain;
-            const link = document.getElementById('email-link');
-            link.href = 'mailto:' + email;
-        })();
-    </script>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Senior Software Engineer</p>
+          <h1 id="hero-title">Petr Holub</h1>
+          <p class="intro">
+            I build software with a focus on usability, mobile platforms and AI-powered tools.
+          </p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img src="avatar.png" alt="" />
+        </div>
+      </section>
+
+      <section id="about" class="page-section">
+        <h2>About</h2>
+        <p>
+            I enjoy building software that people actually like using.
+            My background spans mobile apps, backend systems and data-driven applications, and today I spend most of my time working with Apple platforms and AI.        </p>
+      </section>
+
+      <section id="work" class="page-section">
+        <h2>Current Work</h2>
+        <article class="project-block">
+          <p class="eyebrow">Yolk Timer</p>
+          <p>
+            Minimalistic egg timer for iPhone, designed to cook eggs exactly the way you like them.          </p>
+          <a class="inline-link" href="yolktimer/">See the project →</a>
+        </article>
+      </section>
+
+      <section id="contact" class="page-section contact-section">
+        <h2>Contact</h2>
+        <p>
+            Happy to talk about products, mobile apps or user-friendly software if you’re into that kind of thing.
+        </p>
+        <div class="contact-links" aria-label="Contact links">
+          <a class="contact-link" href="https://github.com/TiguCZ" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.8a9.2 9.2 0 0 0-2.9 17.7c.46.09.63-.2.63-.44v-1.57c-2.56.56-3.1-1.1-3.1-1.1-.42-1.06-1.02-1.34-1.02-1.34-.84-.57.06-.56.06-.56.92.06 1.4.95 1.4.95.82 1.4 2.15 1 2.67.76.08-.59.32-1 .58-1.23-2.04-.23-4.18-1.02-4.18-4.56 0-1.01.36-1.83.95-2.47-.1-.23-.41-1.17.09-2.43 0 0 .78-.25 2.55.95A8.9 8.9 0 0 1 12 6.8c.79.01 1.58.11 2.32.32 1.77-1.2 2.55-.95 2.55-.95.5 1.26.19 2.2.09 2.43.59.64.95 1.46.95 2.47 0 3.55-2.15 4.33-4.19 4.56.33.28.62.84.62 1.69v2.5c0 .24.17.54.63.45A9.2 9.2 0 0 0 12 2.8Z" fill="currentColor"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/holubpetr" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M8.2 10.4v5.6M8.2 8.4v.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M12 16v-3.2a1.8 1.8 0 1 1 3.6 0V16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M12 10.4v5.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a class="contact-link" href="mailto:petr@holub.dev">
+            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="5.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <path d="m4.5 7 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Email</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll('.mobile-nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var details = this.closest('.mobile-nav');
+        if (details) {
+          details.removeAttribute('open');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
