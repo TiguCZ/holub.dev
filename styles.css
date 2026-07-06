@@ -173,12 +173,29 @@ main {
   padding-bottom: 64px;
 }
 
+/* Hero styles for homepage and product pages */
 .hero {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr;
   gap: 32px;
   align-items: center;
   padding: 32px 0 40px;
+}
+
+.hero-home {
+  padding: 32px 0 40px;
+}
+
+.hero-home .hero-copy {
+  padding-left: 4px;
+}
+
+.hero-product {
+  padding: 24px 0 32px;
+}
+
+.hero-product .hero-copy {
+  padding-left: 0;
 }
 
 .hero-art {
@@ -212,7 +229,7 @@ main {
   color: var(--accent);
 }
 
-.page-hero .eyebrow {
+.hero-product .eyebrow {
   font-size: 1.7rem;
   letter-spacing: 0.04em;
   margin-bottom: 8px;
@@ -260,6 +277,10 @@ main {
 }
 
 .hero-art img.app-icon {
+  border-radius: 24px;
+}
+
+.hero.page-hero .hero-art img.app-icon {
   border-radius: 24px;
 }
 
@@ -413,10 +434,15 @@ main {
   .hero {
     grid-template-columns: 1fr;
     padding: 24px 0 32px;
+    text-align: center;
+  }
+
+  .hero .hero-copy {
+    text-align: center;
   }
 
   .hero-art {
-    justify-content: flex-start;
+    justify-content: center;
     order: -1;
   }
 
