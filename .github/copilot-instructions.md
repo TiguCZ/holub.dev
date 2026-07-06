@@ -1,53 +1,44 @@
-# holub.dev — Design & Development Instructions
+# holub.dev — Design & Development Guidelines
 
 ## Purpose
 
 This website is a personal homepage.
+It is not a portfolio, résumé, landing page, or marketing site.
+The goal is to help visitors quickly understand who I am, what I currently build, and how to get in touch.
 
-It is **not** a portfolio, résumé, landing page or marketing website.
+## Current implementation
 
-The goal is for visitors to quickly understand:
+The site is a small static website built with plain HTML, CSS, SVG, and a little inline JavaScript.
+It currently includes:
 
-- who I am
-- what I currently build
-- where they can find me
+- a homepage with hero, about, current work, and contact sections
+- a dedicated Yolk Timer project page
+- a privacy policy page for Yolk Timer
 
-Nothing more.
-
----
+No build step is required. Opening the homepage directly in a browser should work as expected.
 
 ## Philosophy
 
-Build something that still feels good ten years from now.
-
-Choose simplicity over cleverness.
-
-Choose readability over visual effects.
-
-Choose maintainability over frameworks.
-
-The design should feel calm, understated and intentional.
-
-The overall aesthetic should be inspired by Apple's attention to typography and whitespace, **without attempting to imitate Apple's website**.
-
----
+Keep the site calm, readable, and durable.
+Favor simplicity over cleverness, and clarity over visual effects.
+The design should feel understated and intentional, with enough whitespace to stay easy to read for years.
 
 ## Technology
 
-The website must consist only of:
+Use only:
 
 - HTML5
 - CSS3
 - SVG
 - static assets
 
-Do **not** use:
+Avoid:
 
 - build systems
 - bundlers
 - transpilers
 - npm
-- node.js
+- Node.js
 - frameworks
 - Tailwind
 - Bootstrap
@@ -56,37 +47,20 @@ Do **not** use:
 - Astro
 - Svelte
 
-Opening `index.html` directly in a browser should render the website correctly.
-
-Deploying the website should only require copying files to a web server.
-
-No build step should ever be required.
-
----
-
 ## JavaScript
 
-Prefer zero JavaScript.
+Keep JavaScript minimal.
+Use it only when a feature genuinely needs it, such as:
 
-If a feature can be implemented using HTML or CSS, do not use JavaScript.
+- collapsing the mobile navigation after a link is clicked
+- decoding an obfuscated email address from a data attribute
 
-Native HTML elements are preferred.
-
-Examples:
-
-- `<details>`
-- `<dialog>` (if ever needed)
-- anchor navigation
-- CSS animations
-- CSS variables
-
----
+If the same thing can be done with semantic HTML or CSS, prefer that approach.
 
 ## HTML
 
-Use semantic HTML.
-
-Examples:
+Use semantic HTML and keep the structure simple.
+Prefer elements such as:
 
 - header
 - nav
@@ -95,298 +69,119 @@ Examples:
 - article
 - footer
 
-Accessibility is mandatory.
-
-Use proper heading hierarchy.
-
-Use alt text where appropriate.
-
-Support keyboard navigation.
-
----
+Accessibility matters. Use proper heading hierarchy, meaningful link text, alt text where appropriate, and keyboard-friendly interactions.
 
 ## CSS
 
-Use modern CSS.
-
+Use modern CSS and keep the styling centralized in the shared stylesheet.
 Prefer:
 
-- CSS Variables
+- CSS variables
 - Grid
 - Flexbox
 - clamp()
 - min()
 - max()
 
-Support:
-
-- prefers-color-scheme
-- prefers-reduced-motion
-
-Avoid browser-specific hacks whenever possible.
-
----
-
-## Design language
-
-Every page must share the same visual language.
-
-The website should feel like a single coherent product.
-
-Avoid visual inconsistency.
-
----
+Support both light and dark color schemes and respect prefers-reduced-motion.
 
 ## Layout
 
-Maximum content width:
-
-760px
-
-Centered layout.
-
-Generous whitespace.
-
-Spacing scale:
-
-- 8
-- 16
-- 24
-- 32
-- 48
-- 64
-- 96
-
-Use only these values.
-
----
+Keep the layout centered and restrained.
+Use a maximum content width of 760px, generous whitespace, and the existing spacing scale of 8, 16, 24, 32, 48, 64, and 96.
+The site should adapt cleanly to mobile with a single-column layout.
 
 ## Typography
 
-Font stack:
+Use a clean sans-serif stack:
 
-Inter,
+- Inter
+- system-ui
+- sans-serif
 
-system-ui,
+Typography should carry the design. Avoid decorative fonts and excessive visual weight.
 
-sans-serif
+## Color and visual language
 
-Typography should carry the design.
+The current implementation uses a warm orange accent rather than the earlier blue accent.
+Use the current palette as the baseline:
 
-Avoid decorative fonts.
+- light background: #FFFFFF
+- light text: #1D1D1F
+- light secondary text: #6E6E73
+- light accent: #f08a1f
+- dark background: #000000
+- dark text: #F5F5F7
+- dark secondary text: #A1A1A6
+- dark accent: #f29b3d
 
-Avoid excessive font weights.
-
----
-
-## Colors
-
-### Light
-
-Background
-
-#FFFFFF
-
-Surface
-
-#F5F5F7
-
-Text
-
-#1D1D1F
-
-Secondary text
-
-#6E6E73
-
-Accent
-
-#007AFF
-
-### Dark
-
-Background
-
-#000000
-
-Surface
-
-#111111
-
-Text
-
-#F5F5F7
-
-Secondary text
-
-#A1A1A6
-
-Accent
-
-#0A84FF
-
----
+Keep borders subtle and surfaces understated. Avoid gradients, glossy effects, glassmorphism, and neumorphism.
 
 ## Components
 
-Border radius:
+Use simple, quiet components.
+The current site favors:
 
-16px
+- pill-shaped header treatment
+- plain text links
+- simple cards and section spacing
+- small inline SVG icons for links
 
-Shadows:
-
-None or extremely subtle.
-
-Buttons:
-
-Simple.
-
-No gradients.
-
-No glossy effects.
-
-No glassmorphism.
-
-No neumorphism.
-
-Cards should rely on spacing and typography rather than decoration.
-
----
-
-## Animations
-
-Keep animations subtle.
-
-Allowed:
-
-- opacity
-- translateY
-
-Duration:
-
-150–250ms
-
-Respect prefers-reduced-motion.
-
----
+Avoid overdecorating interfaces. Content and spacing should do most of the work.
 
 ## Homepage
 
-The homepage is a single-page website.
-
-Sections:
+The homepage is a single-page experience with these sections:
 
 - Hero
 - About
 - Current Work
 - Contact
 
-Desktop navigation uses anchor links.
-
-Mobile navigation may use a native `<details>` menu.
-
----
+Navigation uses anchor links on desktop and a native details-based menu on mobile.
 
 ## Hero
 
-Keep the existing stylized personal icon.
-
+Keep the existing personal identity and image treatment.
 Display:
 
-Petr Holub
+- Petr Holub
+- Senior Software Engineer
+- a short sentence about building usable software for mobile, backend, and AI-powered tools
 
-Senior Software Engineer
-
-Short description:
-
-"I build software with a focus on usability, mobile platforms and AI-powered tools."
-
-Primary links:
-
-- GitHub
-- LinkedIn
-- Email
-
----
+Primary links should remain GitHub, LinkedIn, and Email.
 
 ## About
 
-One concise paragraph.
-
-Focus on:
-
-- building software people enjoy using
-- mobile development
-- backend experience
-- data-driven systems
-- AI
-- usability
-
-Avoid listing technologies.
-
-Avoid chronological career history.
-
----
+Keep the about section as a single concise paragraph.
+Focus on software people enjoy using, mobile development, backend experience, data-driven systems, AI, and usability.
+Do not turn this into a chronology or a list of technologies.
 
 ## Current Work
 
-Highlight Yolk Timer.
-
-Future projects can be added later.
-
-Do not create a portfolio grid.
-
----
+Highlight Yolk Timer as the main current project.
+Do not create a portfolio grid or add unnecessary project cards.
 
 ## Yolk Timer page
 
-Use exactly the same design language.
-
-Sections:
+Use the same design language as the homepage.
+Sections should be:
 
 - Hero
 - Screenshots
-- Features
+- About
 - Download
 - Footer
 
-Privacy Policy should be a discreet footer link.
-
----
+The privacy policy lives as a separate discreet subpage.
 
 ## Content
 
-Write naturally.
-
-Avoid marketing language.
-
-Avoid buzzwords.
-
-Avoid clichés.
-
-Avoid "Hire Me".
-
-Avoid skill ratings.
-
-Avoid progress bars.
-
-Avoid timelines.
-
-Avoid unnecessary text.
-
-If content does not improve understanding, remove it.
-
----
+Write naturally and keep copy concise.
+Avoid marketing language, clichés, buzzwords, timelines, skill ratings, and progress bars.
+If a sentence does not improve understanding, remove it.
 
 ## Overall feeling
 
-The website should feel:
-
-- calm
-- trustworthy
-- professional
-- timeless
-- minimal
-- human
-
+The site should feel calm, trustworthy, professional, timeless, minimal, and human.
 Visitors should remember the software, not the website.
