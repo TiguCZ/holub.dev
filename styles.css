@@ -342,23 +342,6 @@ main {
   font-size: 0.95rem;
 }
 
-.feature-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.feature-list article {
-  padding: 0 0 16px;
-  border-bottom: 1px solid var(--border);
-}
-
-.feature-list h3 {
-  font-size: 1rem;
-  margin: 0 0 8px;
-}
-
 .page-footer {
   padding: 24px 0 0;
   font-size: 0.95rem;
@@ -451,8 +434,7 @@ main {
     margin-left: 0;
   }
 
-  .gallery,
-  .feature-list {
+  .gallery {
     grid-template-columns: 1fr;
   }
 }
