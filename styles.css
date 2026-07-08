@@ -330,8 +330,13 @@ main {
 }
 
 .inline-link {
-  display: inline-flex;
+  display: block;
   margin-top: 16px;
+  width: fit-content;
+}
+
+.inline-link + .inline-link {
+  margin-top: 8px;
 }
 
 .contact-section {
