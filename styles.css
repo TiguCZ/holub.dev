@@ -210,13 +210,21 @@ main {
   margin: 0 0 12px;
 }
 
-.hero-copy .intro,
+.hero-copy .intro {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 0;
+}
+
 .page-section p,
 .project-block p,
 .page-footer {
   font-size: 1.05rem;
   color: var(--muted);
-  margin: 0;
+}
+
+p + p {
+  margin-top: 0.75rem;
 }
 
 .eyebrow {
